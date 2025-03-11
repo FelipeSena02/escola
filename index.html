@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão Escolar</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Gestão Escolar</h1>
+
+  <!-- Seção para Alunos -->
+  <h2>Gerenciar Alunos</h2>
+  <form id="adicionarAlunoForm">
+    <input type="text" id="nomeAluno" placeholder="Nome do Aluno" required>
+    <input type="number" id="idadeAluno" placeholder="Idade" required>
+    <button type="submit">Adicionar Aluno</button>
+  </form>
+
+  <form id="atualizarAlunoForm">
+    <input type="number" id="idAlunoAtualizar" placeholder="ID do Aluno" required>
+    <input type="text" id="nomeAlunoAtualizar" placeholder="Novo Nome">
+    <input type="number" id="idadeAlunoAtualizar" placeholder="Nova Idade">
+    <button type="submit">Atualizar Aluno</button>
+  </form>
+
+  <form id="removerAlunoForm">
+    <input type="number" id="idAlunoRemover" placeholder="ID do Aluno" required>
+    <button type="submit">Remover Aluno</button>
+  </form>
+
+  <h2>Alunos</h2>
+<button onclick="fetchAlunos()">Carregar Alunos</button>
+<ul id="alunos"></ul>
+
+  <ul id="alunos"></ul>
+
+  <hr>
+
+  <!-- Seção para Disciplinas -->
+  <h2>Gerenciar Disciplinas</h2>
+  <form id="adicionarDisciplinaForm">
+    <input type="text" id="nomeDisciplina" placeholder="Nome da Disciplina" required>
+    <input type="number" id="idProfessorDisciplina" placeholder="ID do Professor" required>
+    <button type="submit">Adicionar Disciplina</button>
+  </form>
+
+  <form id="atualizarDisciplinaForm">
+    <input type="number" id="idDisciplinaAtualizar" placeholder="ID da Disciplina" required>
+    <input type="text" id="nomeDisciplinaAtualizar" placeholder="Novo Nome">
+    <input type="number" id="idProfessorDisciplinaAtualizar" placeholder="Novo ID do Professor">
+    <button type="submit">Atualizar Disciplina</button>
+  </form>
+
+  <form id="removerDisciplinaForm">
+    <input type="number" id="idDisciplinaRemover" placeholder="ID da Disciplina" required>
+    <button type="submit">Remover Disciplina</button>
+  </form>
+
+  <ul id="disciplinas"></ul>
+
+</body>
+</html>
