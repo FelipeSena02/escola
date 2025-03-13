@@ -2,7 +2,9 @@ const express = require("express");
 const { PrismaClient } = require("@prisma/client");
 const app = express();
 const prisma = new PrismaClient();
+const cors = require("cors");
 
+app.use(cors());
 app.use(express.json());
 
 // Rotas para Aluno

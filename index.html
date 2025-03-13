@@ -4,38 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestão Escolar</title>
-  <script src="script.js" defer></script>
+  <script src="./script.js" defer></script>
 </head>
 <body>
   <h1>Gestão Escolar</h1>
 
-  <!-- Seção para Alunos -->
-  <h2>Gerenciar Alunos</h2>
-  <form id="adicionarAlunoForm">
+    <!-- Seção para Alunos -->
+    <h2>Gerenciar Alunos</h2>
+    <form id="adicionarAlunoForm">
     <input type="text" id="nomeAluno" placeholder="Nome do Aluno" required>
     <input type="number" id="idadeAluno" placeholder="Idade" required>
     <button type="submit">Adicionar Aluno</button>
-  </form>
+    </form>
 
-  <form id="atualizarAlunoForm">
+    <form id="atualizarAlunoForm">
     <input type="number" id="idAlunoAtualizar" placeholder="ID do Aluno" required>
     <input type="text" id="nomeAlunoAtualizar" placeholder="Novo Nome">
     <input type="number" id="idadeAlunoAtualizar" placeholder="Nova Idade">
     <button type="submit">Atualizar Aluno</button>
-  </form>
+    </form>
 
-  <form id="removerAlunoForm">
+    <form id="removerAlunoForm">
     <input type="number" id="idAlunoRemover" placeholder="ID do Aluno" required>
     <button type="submit">Remover Aluno</button>
-  </form>
+    </form>
 
-  <h2>Alunos</h2>
-<button onclick="fetchAlunos()">Carregar Alunos</button>
-<ul id="alunos"></ul>
+    <h2>Alunos</h2>
+    <button onclick="fetchAlunos()">Carregar Alunos</button>
+    <ul id="alunos"></ul>
 
-  <ul id="alunos"></ul>
+    <hr>
 
-  <hr>
+    <!-- Seção para Professores -->
+    <h2>Gerenciar Professores</h2>
+    <form id="adicionarProfessorForm">
+    <input type="text" id="nomeProfessor" placeholder="Nome do Professor" required>
+    <input type="text" id="materiaProfessor" placeholder="Materia" required>
+    <button type="submit">Adicionar Professor</button>
+    </form>
+
+    <form id="atualizarProfessorForm">
+    <input type="number" id="idProfessorAtualizar" placeholder="ID do Professor" required>
+    <input type="text" id="nomeProfessorAtualizar" placeholder="Novo Nome">
+    <input type="text" id="materiaProfessorAtualizar" placeholder="Nova materia">
+    <button type="submit">Atualizar Professor</button>
+    </form>
+
+    <form id="removerProfessorForm">
+    <input type="number" id="idProfessorRemover" placeholder="ID do Professor" required>
+    <button type="submit">Remover Professor</button>
+    </form>
+
+    <h2>Professores</h2>
+    <button onclick="fetchProfessores()">Carregar Professores</button>
+    <ul id="professores"></ul>
+
+    <hr>
 
   <!-- Seção para Disciplinas -->
   <h2>Gerenciar Disciplinas</h2>
@@ -57,7 +81,37 @@
     <button type="submit">Remover Disciplina</button>
   </form>
 
-  <ul id="disciplinas"></ul>
+  <h2>Disciplinas</h2>
+  <button onclick="fetchDisciplinas()">Carregar Disciplinas</button>
+  <ul id="disciplinas"></ul> 
+
+  <hr>
+
+<!-- Seção para Boletins -->
+<h2>Gerenciar Boletins</h2>
+<form id="adicionarBoletimForm">
+<input type="number" id="idAlunoBoletim" placeholder="ID do Aluno" required>
+<input type="number" id="idDisciplinaBoletim" placeholder="ID da Disciplina" required>
+<input type="text" id="notaBoletim" placeholder="Nota">
+<button type="submit">Adicionar Boletim</button>
+</form>
+
+<form id="atualizarBoletimForm">
+<input type="number" id="idBoletimAtualizar" placeholder="ID do Boletim" required>
+<input type="number" id="idAlunoBoletimAtualizar" placeholder="Novo ID do Aluno" required>
+<input type="number" id="idDisciplinaBoletimAtualizar" placeholder="Novo ID da Disciplina" required>
+<input type="number" id="notaBoletimAtualizar" placeholder="Nova Nota">
+<button type="submit">Atualizar Boletim</button>
+</form>
+
+<form id="removerBoletimForm">
+<input type="number" id="idBoletimRemover" placeholder="ID do Boletim" required>
+<button type="submit">Remover Boletim</button>
+</form>
+
+<h2>Boletins</h2>
+<button onclick="fetchBoletins()">Carregar Boletins</button>
+<ul id="boletins"></ul>
 
 </body>
 </html>
